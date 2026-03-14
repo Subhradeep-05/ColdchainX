@@ -1,0 +1,135 @@
+.notification-container {
+  position: relative;
+}
+
+.notification-bell {
+  background: none;
+  border: none;
+  color: var(--nude-700);
+  cursor: pointer;
+  position: relative;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.notification-bell:hover {
+  background: var(--nude-100);
+}
+
+.notification-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #e74c3c;
+  color: white;
+  font-size: 0.7rem;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 380px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--nude-200);
+  margin-top: 0.5rem;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.notification-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid var(--nude-200);
+  background: var(--nude-50);
+}
+
+.notification-header h3 {
+  color: var(--nude-800);
+  font-weight: 600;
+}
+
+.notification-header button {
+  background: none;
+  border: none;
+  color: var(--nude-600);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+}
+
+.notification-header button:hover {
+  background: var(--nude-200);
+}
+
+.notification-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.notification-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid var(--nude-100);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.notification-item:hover {
+  background: var(--nude-50);
+}
+
+.notification-item.unread {
+  background: rgba(201, 124, 100, 0.05);
+}
+
+.notification-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--nude-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--nude-600);
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-title {
+  font-weight: 600;
+  color: var(--nude-800);
+  margin-bottom: 0.25rem;
+  font-size: 0.95rem;
+}
+
+.notification-message {
+  color: var(--nude-700);
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.notification-time {
+  color: var(--taupe);
+  font-size: 0.75rem;
+}
+
+.no-notifications {
+  padding: 2rem;
+  text-align: center;
+  color: var(--taupe);
+}

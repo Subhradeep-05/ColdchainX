@@ -1,0 +1,132 @@
+.ai-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.ai-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.ai-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  color: var(--nude-800);
+}
+
+.ai-badge {
+  padding: 0.25rem 0.75rem;
+  background: linear-gradient(135deg, var(--nude-200), var(--nude-300));
+  border-radius: 100px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--nude-700);
+  animation: pulse 2s infinite;
+}
+
+.ai-predictions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.prediction-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  border-left: 4px solid var(--nude-400);
+}
+
+.prediction-item.warning {
+  border-left-color: var(--nude-600);
+  background: linear-gradient(90deg, rgba(201, 124, 100, 0.1), transparent);
+}
+
+.prediction-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--nude-200);
+  border-radius: 10px;
+  color: var(--nude-600);
+}
+
+.prediction-content {
+  flex: 1;
+}
+
+.prediction-label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--taupe);
+  margin-bottom: 0.25rem;
+}
+
+.prediction-value {
+  font-weight: 600;
+  color: var(--nude-800);
+}
+
+.ai-recommendations {
+  margin-bottom: 1.5rem;
+}
+
+.recommendations-title {
+  font-size: 1rem;
+  color: var(--nude-700);
+  margin-bottom: 1rem;
+}
+
+.recommendations-list {
+  list-style: none;
+  padding: 0;
+}
+
+.recommendations-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  color: var(--nude-700);
+  font-size: 0.95rem;
+}
+
+.bullet {
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, var(--nude-400), var(--nude-600));
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.analyze-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, var(--nude-500), var(--nude-600));
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.analyze-btn:hover {
+  background: linear-gradient(135deg, var(--nude-600), var(--nude-700));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201, 124, 100, 0.3);
+}

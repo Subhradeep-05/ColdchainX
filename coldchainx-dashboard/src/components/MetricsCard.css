@@ -1,0 +1,103 @@
+.metrics-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.metrics-card.warning {
+  border-left: 4px solid var(--nude-600);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(249, 233, 226, 0.9)
+  );
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--nude-200), var(--nude-300));
+  border-radius: 12px;
+  color: var(--nude-600);
+}
+
+.card-change {
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.card-change.positive {
+  background: rgba(201, 124, 100, 0.2);
+  color: var(--nude-600);
+}
+
+.card-change.negative {
+  background: rgba(233, 188, 172, 0.3);
+  color: var(--nude-700);
+}
+
+.card-title {
+  font-size: 1rem;
+  color: var(--taupe);
+  margin-bottom: 0.5rem;
+}
+
+.card-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--nude-800);
+  line-height: 1.2;
+}
+
+.card-unit {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--taupe);
+  margin-left: 0.25rem;
+}
+
+.card-footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--nude-200);
+}
+
+.trend-indicator {
+  font-size: 0.9rem;
+  color: var(--taupe);
+}
+
+.card-shine {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: rotate(30deg);
+  animation: shimmer 6s infinite;
+  pointer-events: none;
+}

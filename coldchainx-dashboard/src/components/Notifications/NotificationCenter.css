@@ -1,0 +1,143 @@
+.notification-center {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.notification-center h2 {
+  color: var(--nude-800);
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.notification-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.group-date {
+  color: var(--taupe);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--nude-200);
+}
+
+.notification-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid var(--nude-200);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.notification-card:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--nude-300);
+}
+
+.notification-card.unread {
+  background: rgba(201, 124, 100, 0.02);
+  border-left: 4px solid var(--nude-500);
+}
+
+.notification-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--nude-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon.new {
+  color: #3498db;
+}
+.icon.success {
+  color: #27ae60;
+}
+.icon.info {
+  color: #9b59b6;
+}
+.icon.warning {
+  color: #e74c3c;
+}
+.icon.default {
+  color: var(--nude-600);
+}
+
+.notification-card-content {
+  flex: 1;
+}
+
+.notification-card-content h4 {
+  color: var(--nude-800);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.notification-card-content p {
+  color: var(--nude-700);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.notification-time {
+  color: var(--taupe);
+  font-size: 0.8rem;
+}
+
+.unread-dot {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--nude-500);
+}
+
+.no-notifications-center {
+  text-align: center;
+  padding: 4rem;
+  color: var(--taupe);
+}
+
+.no-notifications-center svg {
+  color: var(--nude-300);
+  margin-bottom: 1rem;
+}
+
+.no-notifications-center h3 {
+  color: var(--nude-600);
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .notification-center {
+    padding: 1rem;
+  }
+
+  .notification-card {
+    padding: 1rem;
+  }
+
+  .notification-card-icon {
+    width: 40px;
+    height: 40px;
+  }
+}

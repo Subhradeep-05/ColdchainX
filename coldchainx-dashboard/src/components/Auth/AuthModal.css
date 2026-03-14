@@ -1,0 +1,128 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+}
+
+.auth-modal {
+  position: fixed;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  z-index: 10000;
+  animation: modalAppear 0.3s ease;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) !important;
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) !important;
+  }
+}
+
+.auth-modal-content {
+  position: relative;
+  padding: 2rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--nude-100);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--nude-700);
+  z-index: 10;
+  transition: all 0.3s ease;
+  border: 1px solid var(--nude-200);
+}
+
+.modal-close:hover {
+  background: var(--nude-200);
+  transform: rotate(90deg);
+}
+
+/* Modal view styles for Login/SignIn components */
+.login-container.modal-view,
+.signin-container.modal-view {
+  min-height: auto;
+  padding: 0;
+  background: transparent;
+  width: 100%;
+}
+
+.login-container.modal-view::before,
+.signin-container.modal-view::before {
+  display: none;
+}
+
+.login-container.modal-view .login-card,
+.signin-container.modal-view .signin-card {
+  background: white;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  border: none;
+  backdrop-filter: none;
+}
+
+/* Ensure the modal content doesn't overflow */
+.auth-modal-content .login-form,
+.auth-modal-content .signin-form {
+  max-height: calc(90vh - 120px);
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+/* Custom scrollbar for modal content */
+.auth-modal-content .login-form::-webkit-scrollbar,
+.auth-modal-content .signin-form::-webkit-scrollbar {
+  width: 4px;
+}
+
+.auth-modal-content .login-form::-webkit-scrollbar-track,
+.auth-modal-content .signin-form::-webkit-scrollbar-track {
+  background: var(--nude-100);
+  border-radius: 4px;
+}
+
+.auth-modal-content .login-form::-webkit-scrollbar-thumb,
+.auth-modal-content .signin-form::-webkit-scrollbar-thumb {
+  background: var(--nude-400);
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .auth-modal {
+    width: 95%;
+    max-height: 95vh;
+  }
+
+  .auth-modal-content {
+    padding: 1.5rem;
+  }
+}

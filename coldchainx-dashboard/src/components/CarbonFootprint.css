@@ -1,0 +1,146 @@
+.carbon-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.carbon-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.carbon-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  color: var(--nude-800);
+}
+
+.carbon-badge {
+  padding: 0.25rem 0.75rem;
+  background: linear-gradient(135deg, var(--nude-200), var(--nude-300));
+  border-radius: 100px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--nude-700);
+}
+
+.carbon-stats {
+  margin-bottom: 1.5rem;
+}
+
+.carbon-main-stat {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--taupe);
+  margin-bottom: 0.5rem;
+}
+
+.stat-value-group {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--nude-800);
+  line-height: 1;
+}
+
+.stat-unit {
+  font-size: 1rem;
+  color: var(--taupe);
+}
+
+.progress-item {
+  margin-bottom: 1rem;
+}
+
+.progress-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--nude-700);
+  margin-bottom: 0.25rem;
+}
+
+.progress-bar {
+  height: 8px;
+  background: var(--nude-200);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--nude-400), var(--nude-600));
+  border-radius: 4px;
+}
+
+.carbon-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.metric-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+}
+
+.metric-item svg {
+  color: var(--nude-500);
+}
+
+.metric-item div {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-label {
+  font-size: 0.8rem;
+  color: var(--taupe);
+}
+
+.metric-value {
+  font-weight: 600;
+  color: var(--nude-800);
+}
+
+.offset-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, var(--nude-500), var(--nude-600));
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.offset-btn:hover {
+  background: linear-gradient(135deg, var(--nude-600), var(--nude-700));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201, 124, 100, 0.3);
+}

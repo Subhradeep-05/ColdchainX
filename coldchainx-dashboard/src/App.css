@@ -1,0 +1,238 @@
+/* Login Prompt Styles */
+.login-prompt {
+  background: linear-gradient(135deg, var(--nude-500), var(--nude-600));
+  padding: 0.75rem 0;
+  color: white;
+  position: relative;
+  z-index: 10;
+  animation: slideDown 0.5s ease;
+  margin-top: 80px; /* Account for fixed navbar */
+  width: 100%;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.prompt-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.prompt-content p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.prompt-login-btn {
+  padding: 0.6rem 2rem;
+  background: white;
+  border: none;
+  border-radius: 100px;
+  color: var(--nude-700);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+
+.prompt-login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  background: var(--nude-50);
+}
+
+/* Welcome Banner Styles */
+.welcome-banner {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--nude-200);
+  animation: slideDown 0.5s ease;
+  margin-top: 80px; /* Account for fixed navbar */
+  width: 100%;
+}
+
+.welcome-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.welcome-content h1 {
+  font-size: 1.25rem;
+  color: var(--nude-800);
+  margin: 0 0 0.25rem 0;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  background: linear-gradient(135deg, var(--nude-200), var(--nude-300));
+  border-radius: 100px;
+  font-size: 0.8rem;
+  color: var(--nude-700);
+}
+
+.logout-btn {
+  padding: 0.5rem 1.5rem;
+  background: transparent;
+  border: 2px solid var(--nude-300);
+  border-radius: 8px;
+  color: var(--nude-700);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: var(--nude-100);
+  border-color: var(--nude-400);
+}
+
+/* Section Styles */
+.metrics-section {
+  padding: 3rem 0;
+  position: relative;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.tracker-section {
+  padding: 2rem 0 3rem;
+}
+
+.tracker-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.features-section {
+  padding: 2rem 0 3rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.shipments-section {
+  padding: 2rem 0 4rem;
+}
+
+/* Auth App Styles (kept for reference but not actively used) */
+.app-auth {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--cream) 0%, var(--sand) 100%);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .tracker-grid,
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .login-prompt,
+  .welcome-banner {
+    margin-top: 70px;
+  }
+
+  .prompt-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .welcome-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .welcome-content h1 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-section {
+    padding: 2rem 0;
+  }
+
+  .tracker-section,
+  .features-section,
+  .shipments-section {
+    padding: 1.5rem 0;
+  }
+}
+
+/* Container class (if not defined elsewhere) */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+/* Loading Spinner */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--nude-200);
+  border-top: 3px solid var(--nude-600);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

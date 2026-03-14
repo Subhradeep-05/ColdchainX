@@ -1,0 +1,90 @@
+    .layout {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    padding-top: 80px; /* Add padding to account for fixed navbar */
+    }
+
+    .main-content {
+    position: relative;
+    z-index: 2;
+    }
+
+    .mouse-glow {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(
+        circle,
+        rgba(201, 124, 100, 0.15) 0%,
+        transparent 70%
+    );
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition:
+        width 0.2s,
+        height 0.2s;
+    }
+
+    .floating-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    }
+
+    .shape {
+    position: absolute;
+    background: linear-gradient(135deg, var(--nude-200), var(--nude-300));
+    border-radius: 50%;
+    opacity: 0.3;
+    filter: blur(60px);
+    }
+
+    .shape-1 {
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    left: 5%;
+    animation: float 20s infinite;
+    }
+
+    .shape-2 {
+    width: 400px;
+    height: 400px;
+    bottom: 10%;
+    right: 5%;
+    background: linear-gradient(135deg, var(--nude-300), var(--nude-400));
+    animation: float 25s infinite reverse;
+    }
+
+    .shape-3 {
+    width: 200px;
+    height: 200px;
+    top: 40%;
+    right: 20%;
+    background: linear-gradient(135deg, var(--nude-100), var(--nude-200));
+    animation: float 15s infinite 2s;
+    }
+
+    .shape-4 {
+    width: 350px;
+    height: 350px;
+    bottom: 30%;
+    left: 15%;
+    background: linear-gradient(135deg, var(--nude-400), var(--nude-500));
+    opacity: 0.2;
+    animation: float 22s infinite 1s;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+    .layout {
+        padding-top: 70px;
+    }
+    }

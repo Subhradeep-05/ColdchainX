@@ -1,0 +1,173 @@
+.wallet-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.wallet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.wallet-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  color: var(--nude-800);
+}
+
+.wallet-badge {
+  padding: 0.25rem 0.75rem;
+  background: linear-gradient(135deg, var(--nude-200), var(--nude-300));
+  border-radius: 100px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--nude-700);
+}
+
+.wallet-balance {
+  text-align: center;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--nude-100), var(--nude-200));
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+}
+
+.balance-label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--taupe);
+  margin-bottom: 0.5rem;
+}
+
+.balance-amount {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--nude-800);
+}
+
+.currency {
+  font-size: 1rem;
+  color: var(--taupe);
+}
+
+.wallet-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border: 2px solid var(--nude-300);
+  border-radius: 12px;
+  background: transparent;
+  color: var(--nude-700);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  background: var(--nude-100);
+  border-color: var(--nude-400);
+}
+
+.recent-transactions {
+  margin-bottom: 1.5rem;
+}
+
+.transactions-title {
+  font-size: 1rem;
+  color: var(--nude-700);
+  margin-bottom: 1rem;
+}
+
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.transaction-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+}
+
+.transaction-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--nude-200);
+  border-radius: 8px;
+  color: var(--nude-600);
+}
+
+.transaction-details {
+  flex: 1;
+}
+
+.transaction-type {
+  display: block;
+  font-weight: 500;
+  color: var(--nude-800);
+  font-size: 0.9rem;
+}
+
+.transaction-date {
+  font-size: 0.8rem;
+  color: var(--taupe);
+}
+
+.transaction-amount {
+  font-weight: 600;
+}
+
+.transaction-amount.positive {
+  color: var(--nude-600);
+}
+
+.transaction-amount.negative {
+  color: var(--nude-800);
+}
+
+.view-all-transactions {
+  width: 100%;
+  padding: 0.75rem;
+  background: transparent;
+  border: 2px solid var(--nude-300);
+  border-radius: 12px;
+  color: var(--nude-700);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-all-transactions:hover {
+  background: var(--nude-100);
+  border-color: var(--nude-400);
+}
